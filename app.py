@@ -25,8 +25,8 @@ def generate_response(input_text):
 
 with st.form('Form1'):
   getText=text = st.text_area('`1` Tell us what you want to become')
-  getEconmics=st.selectbox('`2` To better assist let us know if You are economically', ['Poor Class', 'Middle Class','Rich Class'], key=1)
-  getClass=slider1=st.slider(label='`3` Which class you are studying in.', min_value=0, max_value=30, key=2)
+  getEconmics=st.selectbox('`2` To better assist let us know if You are economically', ['Poor', 'Middle','Rich'], key=1)
+  getClass=slider1=st.slider(label='`3` Which class/standard you are studying in.', min_value=0, max_value=30, key=2)
   getNationality=st.selectbox('`4` Select your nationality(So that you get your region specific learning path)', country_names, key=3)
   getLanguage=st.selectbox('`4` Select your language(So that you get your language specific learning path)', ['english', 'Hindi','spanish','chinese','french  '], key=4)
   getAge=st.slider(label='`5` Select your age(So that you get your age specific learning path)', min_value=0, max_value=100, key=5)
@@ -38,5 +38,4 @@ with st.form('Form1'):
   if not openai_api_key:
       st.warning('To get answer please enter your Gemini API Key in the sidebar OR create for free  https://aistudio.google.com/app/apikey', icon='⚠')
   if getsubmittedForm and openai_api_key:
-    print(createPrompt)
     generate_response(createPrompt)
