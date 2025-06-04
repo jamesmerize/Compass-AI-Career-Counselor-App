@@ -1,4 +1,4 @@
-langchain-google-genai==1.0.1
-streamlit==1.33.0
+langchain-google-genai
+streamlit
 google-generativeai
 pycountry

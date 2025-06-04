@@ -20,7 +20,7 @@ st.sidebar.markdown("👋 Hi, Thank you for checking my app. My name is James. C
                  My Tech stack is : Langchain for LLM Framework, Google Vertex/Gemini LLM, StreamLit for frontend. https://www.linkedin.com/in/mascarenhasjames")
 
 def generate_response(input_text):
-  llm = GoogleGenerativeAI(model="gemini-1.0-pro-latest", google_api_key=openai_api_key)
+  llm = GoogleGenerativeAI(model="gemini-2.0-flash", google_api_key=openai_api_key)
   st.info(llm(input_text))
 
 with st.form('Form1'):
